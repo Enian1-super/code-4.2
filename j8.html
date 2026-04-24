@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="student1"></p>
+    <p id="student2"></p>
+
+    <script>
+        class Student {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+
+            }
+        }
+
+        const student1 = new Student("Enian",2009);
+        document.getElementById("student1").innerHTML = "My name is " + student1.name + ". I was born in " + student1.year + ". I am " + student1.age() + " years old";
+        const student2 = new Student("Arjon", 2010);
+        document.getElementById("student2").innerHTML = "My name is " + student2.name + ". I was born in " + student2.year + ". I am " + student2.age() + " years old";
+    </script>
+</body>
+</html>
