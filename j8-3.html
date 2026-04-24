@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hello"></p>
+    <p id="welcome"></p>
+    <p id="hi"></p>
+
+    <script>
+        class Student{
+            constructor(name){
+                this.studentname = name;
+            }
+
+            static hello(){
+                return "Hello " ;
+            }
+
+            static welcome(x) {
+                return "Welcome " + x.studentname;
+            }
+
+            hi(){
+                return "Hi " + this.studentname;
+            }
+        }
+
+        const student = new Student("Enian");
+        document.getElementById("hello").innerHTML = Student.hello();
+        document.getElementById("welcome").innerHTML = Student.welcome(student);
+        document.getElementById("hi").innerHTML = student.hi();
+    </script>
+</body>
+</html>
