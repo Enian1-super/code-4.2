@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ascend()">click</button>
+    <button onclick="descend()">click to go back</button>
+
+    <p id="result"></p>
+
+    <script>
+        var points = [30, 40, 10, 2, 345, 28, 59, 92];
+
+        document.getElementById("result").innerHTML = points;
+
+        function ascend() {
+            points.sort(function(a, b){
+                return(a-b);
+                
+            });
+        
+
+        document.getElementById("result").innerHTML = points;
+
+         }
+
+        function descend() {
+            points.sort(function(a, b){
+                return(b-a);
+            });
+
+        document.getElementById("result").innerHTML = points;
+
+         }
+
+
+
+    </script>
+</body>
+</html>
