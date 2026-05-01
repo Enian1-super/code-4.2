@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p  id="demo2"></p>
+    <script>
+        var day_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        var days = " ";
+        for(i=0; i<day_list.length; i++) {
+            days += day_list[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = "The days of the week are: " + days;
+
+        var today;
+        switch(new Date().getDay()) {
+            case 0:
+                today = "Sunday";
+                break;
+            case 1:
+                today = "Monday";
+                break;
+            case 2:
+                today = "Tuesday";
+                break;
+            case 3:
+                today = "Wednesday";
+                break;
+            case 4:
+                today = "Thursday";
+                break;
+            case 5:
+                today = "Friday";
+                break;
+            case 6:
+                today = "Saturday";
+                break;
+        }
+
+        document.getElementById("demo2").innerHTML = "Today is: " + today;
+    </script>
+</body>
+</html>
